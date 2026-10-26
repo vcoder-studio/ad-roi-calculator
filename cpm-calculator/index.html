@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CPM Calculator – Cost per 1,000 Impressions, Budget and CPC</title>
+  <meta name="description" content="Free CPM calculator: get cost per thousand impressions from budget and impressions, or the impressions a budget buys at a given CPM. Converts CPM to CPC with your CTR.">
+  <link rel="canonical" href="https://vcoder-studio.github.io/ad-roi-calculator/cpm-calculator/">
+  <link rel="icon" href="../assets/favicon.png">
+  <link rel="stylesheet" href="../assets/style.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CPM Calculator – cost per 1,000 impressions">
+  <meta property="og:description" content="CPM, impressions, budget, CTR and CPC in one calculator. Free, in your browser.">
+  <meta property="og:url" content="https://vcoder-studio.github.io/ad-roi-calculator/cpm-calculator/">
+  <meta property="og:image" content="https://vcoder-studio.github.io/ad-roi-calculator/assets/icon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "CPM Calculator",
+    "url": "https://vcoder-studio.github.io/ad-roi-calculator/cpm-calculator/",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Any (web browser)",
+    "description": "Calculates CPM (cost per 1,000 impressions), impressions or budget from the other two, and converts CPM to CPC using CTR.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How do you calculate CPM?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Divide the ad spend by the number of impressions and multiply by 1,000. 500 spent on 100,000 impressions is a CPM of 500 ÷ 100,000 × 1,000 = 5." } },
+      { "@type": "Question", "name": "How many impressions will my budget buy?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Divide the budget by the CPM and multiply by 1,000. A budget of 1,500 at a CPM of 5 buys 1,500 ÷ 5 × 1,000 = 300,000 impressions." } },
+      { "@type": "Question", "name": "How do I convert CPM to CPC?",
+        "acceptedAnswer": { "@type": "Answer", "text": "CPC = CPM ÷ (CTR × 1,000). With a CPM of 5 and a CTR of 1.5%, CPC = 5 ÷ 15 ≈ 0.33." } },
+      { "@type": "Question", "name": "What does the M in CPM stand for?",
+        "acceptedAnswer": { "@type": "Answer", "text": "M is the Roman numeral for 1,000. CPM means cost per mille: the price of one thousand ad impressions." } }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-head">
+    <div class="wrap head-row">
+      <a class="brand" href="../"><img src="../assets/icon.png" alt="" width="30" height="30"> Ad ROI Calculator</a>
+      <nav class="site-nav" aria-label="Calculators">
+        <a href="../roas-calculator/">ROAS</a>
+        <a href="../break-even-roas-calculator/">Break-even ROAS</a>
+        <a href="../cpm-calculator/" aria-current="page">CPM</a>
+        <a href="../ad-budget-calculator/">Ad budget</a>
+        <a class="btn btn-primary btn-small" href="https://chromewebstore.google.com/detail/fnnnlndhfjnbdaienmlfkkcjajhhiaon?utm_source=site-cpm">Add to Chrome</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <p class="eyebrow">Free calculator</p>
+      <h1>CPM Calculator</h1>
+      <p class="lead">Fill in any two of budget, impressions and CPM, and get the third. Add your CTR to turn CPM into clicks and cost per click.</p>
+    </section>
+
+    <div class="tool">
+      <div id="cpm"></div>
+      <aside class="promo">
+        <img src="../assets/icon.png" alt="" width="44" height="44">
+        <h2>Plan reach and clicks in the side panel</h2>
+        <p>Ad ROI Calculator for Chrome stays open while you move between ad accounts and media kits. Paste a CPM from one tab and a CTR from another.</p>
+        <ul>
+          <li>CPM, CPC, CTR, reach, frequency, CPV</li>
+          <li>Carry on to leads, sales and ROAS</li>
+          <li>The formula behind every metric</li>
+          <li>Works offline, no signup</li>
+        </ul>
+        <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/fnnnlndhfjnbdaienmlfkkcjajhhiaon?utm_source=site-cpm">Add to Chrome — free</a>
+        <p class="fine">The free version sends no data anywhere.</p>
+      </aside>
+    </div>
+
+    <article class="prose">
+      <h2>How to calculate CPM</h2>
+      <span class="formula">CPM = Ad spend ÷ Impressions × 1,000</span>
+      <p>CPM is the cost of 1,000 ad impressions. If you spent 500 and your ads were shown 100,000 times, CPM = 500 ÷ 100,000 × 1,000 = <strong>5</strong>.</p>
+
+      <h2>Work it the other way</h2>
+      <table>
+        <thead><tr><th>You know</th><th>You want</th><th>Formula</th></tr></thead>
+        <tbody>
+          <tr><td>Budget and CPM</td><td>Impressions</td><td>Budget ÷ CPM × 1,000</td></tr>
+          <tr><td>Impressions and CPM</td><td>Budget</td><td>CPM × impressions ÷ 1,000</td></tr>
+          <tr><td>CPM and CTR</td><td>CPC</td><td>CPM ÷ (CTR × 1,000)</td></tr>
+          <tr><td>CPC and CTR</td><td>CPM</td><td>CPC × CTR × 1,000</td></tr>
+        </tbody>
+      </table>
+      <p>Example: a placement sells at a CPM of 5 and you need 300,000 impressions. The budget is 5 × 300,000 ÷ 1,000 = <strong>1,500</strong>. If 1.5% of viewers click, you get 4,500 clicks, and each click costs 5 ÷ (0.015 × 1,000) ≈ <strong>0.33</strong>.</p>
+
+      <h2>CPM or CPC: which tells you more?</h2>
+      <p>CPM shows what attention costs. CPC shows what a visit costs. The two are linked through CTR. A cheap CPM with a weak CTR can end up as an expensive click. To compare placements, bring both to the same metric: cost per click, or better, cost per sale. The <a href="../ad-budget-calculator/">ad budget calculator</a> follows that chain all the way to sales.</p>
+
+      <h2>FAQ</h2>
+      <div class="faq">
+        <details open><summary>How do you calculate CPM?</summary>
+          <p>Divide the ad spend by the number of impressions and multiply by 1,000. 500 spent on 100,000 impressions is a CPM of 500 ÷ 100,000 × 1,000 = 5.</p></details>
+        <details><summary>How many impressions will my budget buy?</summary>
+          <p>Divide the budget by the CPM and multiply by 1,000. A budget of 1,500 at a CPM of 5 buys 1,500 ÷ 5 × 1,000 = 300,000 impressions.</p></details>
+        <details><summary>How do I convert CPM to CPC?</summary>
+          <p>CPC = CPM ÷ (CTR × 1,000). With a CPM of 5 and a CTR of 1.5%, CPC = 5 ÷ 15 ≈ 0.33.</p></details>
+        <details><summary>What does the M in CPM stand for?</summary>
+          <p>M is the Roman numeral for 1,000. CPM means cost per mille: the price of one thousand ad impressions.</p></details>
+      </div>
+
+      <h2>More calculators</h2>
+      <div class="related">
+        <a href="../"><strong>Profit goal planner</strong><span>From target profit to ad budget</span></a>
+        <a href="../roas-calculator/"><strong>ROAS calculator</strong><span>Return on ad spend, ACOS and cost per order</span></a>
+        <a href="../break-even-roas-calculator/"><strong>Break-even ROAS</strong><span>The ROAS below which ads lose money</span></a>
+        <a href="../ad-budget-calculator/"><strong>Ad budget calculator</strong><span>How much to spend for a sales or leads goal</span></a>
+      </div>
+    </article>
+
+    <section class="cta-band">
+      <div>
+        <h2>From CPM to profit in one panel</h2>
+        <p>Get the same calculator in your Chrome side panel, with every metric from CPM to LTV and ready funnels for your business.</p>
+      </div>
+      <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/fnnnlndhfjnbdaienmlfkkcjajhhiaon?utm_source=site-cpm">Add to Chrome — free</a>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap foot-grid">
+      <span>© Vcoder Studio · Ad ROI Calculator</span>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="../">Profit goal planner</a>
+        <a href="../roas-calculator/">ROAS calculator</a>
+        <a href="../break-even-roas-calculator/">Break-even ROAS</a>
+        <a href="../ad-budget-calculator/">Ad budget calculator</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="mailto:client.care@tutamail.com?subject=Ad%20ROI%20Calculator">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { mountCalculator, fmt } from '../assets/app.js';
+    mountCalculator(document.getElementById('cpm'), {
+      fields: [
+        { key: 'ad_spend', label: 'Budget', hint: 'Ad spend' },
+        { key: 'impressions', label: 'Impressions' },
+        { key: 'cpm', label: 'CPM', hint: 'Cost per 1,000 impressions' },
+        { heading: 'Clicks (optional)' },
+        { key: 'ctr', label: 'CTR', hint: 'Clicks ÷ impressions' },
+        { key: 'clicks', label: 'Clicks' },
+        { key: 'cpc', label: 'CPC', hint: 'Cost per click' },
+        { heading: 'Reach (optional)' },
+        { key: 'reach', label: 'Reach', hint: 'Unique people who saw the ad' },
+        { key: 'frequency', label: 'Frequency', hint: 'Impressions ÷ reach' }
+      ],
+      example: { ad_spend: 500, impressions: 100000, ctr: 0.015 },
+      summary: v => {
+        if (v.cpm === undefined) return '';
+        let s = `CPM <strong>${fmt(v.cpm, 'currency')}</strong>: 1,000 impressions cost ${fmt(v.cpm, 'currency')}.`;
+        if (v.cpc !== undefined) s += ` One click costs <strong>${fmt(v.cpc, 'currency')}</strong>.`;
+        return s;
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ROAS Calculator – Return on Ad Spend, ACOS and Break-Even ROAS</title>
+  <meta name="description" content="Free ROAS calculator: enter ad spend and revenue to get return on ad spend, ACOS, cost per order and whether the campaign is profitable. Also works backwards from a target ROAS.">
+  <link rel="canonical" href="https://vcoder-studio.github.io/ad-roi-calculator/roas-calculator/">
+  <link rel="icon" href="../assets/favicon.png">
+  <link rel="stylesheet" href="../assets/style.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ROAS Calculator – return on ad spend, ACOS and profit">
+  <meta property="og:description" content="Ad spend and revenue in, ROAS, ACOS and profit out. Free, in your browser.">
+  <meta property="og:url" content="https://vcoder-studio.github.io/ad-roi-calculator/roas-calculator/">
+  <meta property="og:image" content="https://vcoder-studio.github.io/ad-roi-calculator/assets/icon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "ROAS Calculator",
+    "url": "https://vcoder-studio.github.io/ad-roi-calculator/roas-calculator/",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Any (web browser)",
+    "description": "Calculates return on ad spend (ROAS), ACOS, cost per order, break-even ROAS and net profit from ad spend and revenue.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How do you calculate ROAS?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Divide the revenue from ads by the ad spend. 4,000 in revenue from 1,000 in ad spend is a ROAS of 4, often written as 4× or 400%." } },
+      { "@type": "Question", "name": "What is a good ROAS?",
+        "acceptedAnswer": { "@type": "Answer", "text": "There is no single good number. A ROAS is good when it is above your break-even ROAS, which is 1 divided by your gross margin. With a 40% margin you break even at a ROAS of 2.5; with a 70% margin, at about 1.43." } },
+      { "@type": "Question", "name": "What is the difference between ROAS and ACOS?",
+        "acceptedAnswer": { "@type": "Answer", "text": "They are the same ratio turned upside down. ROAS is revenue ÷ ad spend; ACOS is ad spend ÷ revenue. A ROAS of 4 equals an ACOS of 25%." } },
+      { "@type": "Question", "name": "Is ROAS the same as ROI?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. ROAS uses revenue, ROI uses profit. ROAS does not account for what the goods cost you, so a campaign with a ROAS of 2 can still lose money if your margin is below 50%." } }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-head">
+    <div class="wrap head-row">
+      <a class="brand" href="../"><img src="../assets/icon.png" alt="" width="30" height="30"> Ad ROI Calculator</a>
+      <nav class="site-nav" aria-label="Calculators">
+        <a href="../roas-calculator/" aria-current="page">ROAS</a>
+        <a href="../break-even-roas-calculator/">Break-even ROAS</a>
+        <a href="../cpm-calculator/">CPM</a>
+        <a href="../ad-budget-calculator/">Ad budget</a>
+        <a class="btn btn-primary btn-small" href="https://chromewebstore.google.com/detail/fnnnlndhfjnbdaienmlfkkcjajhhiaon?utm_source=site-roas">Add to Chrome</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <p class="eyebrow">Free calculator</p>
+      <h1>ROAS Calculator</h1>
+      <p class="lead">Enter ad spend and revenue to get your return on ad spend, ACOS and cost per order. Add your gross margin to see whether the campaign actually makes money. Need a target? Type the ROAS you want and get the revenue it takes.</p>
+    </section>
+
+    <div class="tool">
+      <div id="roas"></div>
+      <aside class="promo">
+        <img src="../assets/icon.png" alt="" width="44" height="44">
+        <h2>Check ROAS without leaving your ad account</h2>
+        <p>Ad ROI Calculator for Chrome sits in the browser side panel. Copy numbers from your ad account or report. The panel stays open when you switch tabs.</p>
+        <ul>
+          <li>ROAS, POAS, ACOS, CPA, LTV and more</li>
+          <li>Lock a target ROAS and get the budget</li>
+          <li>The formula behind every metric</li>
+          <li>Works offline, no signup</li>
+        </ul>
+        <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/fnnnlndhfjnbdaienmlfkkcjajhhiaon?utm_source=site-roas">Add to Chrome — free</a>
+        <p class="fine">The free version sends no data anywhere.</p>
+      </aside>
+    </div>
+
+    <article class="prose">
+      <h2>How to calculate ROAS</h2>
+      <span class="formula">ROAS = Revenue from ads ÷ Ad spend</span>
+      <p>If a campaign cost 1,000 and brought in 4,000 in revenue, ROAS = 4,000 ÷ 1,000 = <strong>4</strong>. People write it as 4, 4× or 400%. Each means the same thing: every 1 spent on ads brought back 4 in revenue.</p>
+      <p>With 50 orders, the same campaign has an average order value of 4,000 ÷ 50 = 80 and a cost per order of 1,000 ÷ 50 = 20.</p>
+
+      <h2>What is a good ROAS?</h2>
+      <p>No single number is “good” for everyone. It depends on your margin. ROAS counts revenue, not profit, so you need to compare it with your <strong>break-even ROAS</strong>:</p>
+      <span class="formula">Break-even ROAS = 1 ÷ Gross margin</span>
+      <p>With a 40% gross margin, break-even ROAS is 1 ÷ 0.4 = 2.5. The campaign above, with a ROAS of 4, earns 4,000 × 40% = 1,600 in gross profit. After 1,000 of ad spend, that leaves 600 in profit. At a ROAS of 2, the same campaign would lose money. More on this in the <a href="../break-even-roas-calculator/">break-even ROAS calculator</a>.</p>
+
+      <h2>ROAS, ACOS and ROI: what’s the difference?</h2>
+      <table>
+        <thead><tr><th>Metric</th><th>Formula</th><th>Example above</th></tr></thead>
+        <tbody>
+          <tr><td>ROAS</td><td>Revenue ÷ ad spend</td><td class="num">4×</td></tr>
+          <tr><td>ACOS (ad cost of sales)</td><td>Ad spend ÷ revenue</td><td class="num">25%</td></tr>
+          <tr><td>POAS (profit on ad spend)</td><td>Gross profit ÷ ad spend</td><td class="num">1.6×</td></tr>
+          <tr><td>ROI / ROMI</td><td>(Gross profit − ad spend) ÷ ad spend</td><td class="num">60%</td></tr>
+        </tbody>
+      </table>
+
+      <h2>FAQ</h2>
+      <div class="faq">
+        <details open><summary>How do you calculate ROAS?</summary>
+          <p>Divide the revenue from ads by the ad spend. 4,000 in revenue from 1,000 in ad spend is a ROAS of 4, often written as 4× or 400%.</p></details>
+        <details><summary>What is a good ROAS?</summary>
+          <p>There is no single good number. A ROAS is good when it is above your break-even ROAS, which is 1 divided by your gross margin. With a 40% margin you break even at a ROAS of 2.5; with a 70% margin, at about 1.43.</p></details>
+        <details><summary>What is the difference between ROAS and ACOS?</summary>
+          <p>They are the same ratio turned upside down. ROAS is revenue ÷ ad spend; ACOS is ad spend ÷ revenue. A ROAS of 4 equals an ACOS of 25%.</p></details>
+        <details><summary>Is ROAS the same as ROI?</summary>
+          <p>No. ROAS uses revenue, ROI uses profit. ROAS does not account for what the goods cost you, so a campaign with a ROAS of 2 can still lose money if your margin is below 50%.</p></details>
+      </div>
+
+      <h2>More calculators</h2>
+      <div class="related">
+        <a href="../"><strong>Profit goal planner</strong><span>From target profit to ad budget</span></a>
+        <a href="../break-even-roas-calculator/"><strong>Break-even ROAS</strong><span>The ROAS below which ads lose money</span></a>
+        <a href="../cpm-calculator/"><strong>CPM calculator</strong><span>CPM, impressions, budget, CTR and CPC</span></a>
+        <a href="../ad-budget-calculator/"><strong>Ad budget calculator</strong><span>How much to spend for a sales or leads goal</span></a>
+      </div>
+    </article>
+
+    <section class="cta-band">
+      <div>
+        <h2>Your ROAS, one click away in every tab</h2>
+        <p>Get the same calculator in your Chrome side panel, with every metric from CPM to LTV and ready funnels for your business.</p>
+      </div>
+      <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/fnnnlndhfjnbdaienmlfkkcjajhhiaon?utm_source=site-roas">Add to Chrome — free</a>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap foot-grid">
+      <span>© Vcoder Studio · Ad ROI Calculator</span>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="../">Profit goal planner</a>
+        <a href="../break-even-roas-calculator/">Break-even ROAS</a>
+        <a href="../cpm-calculator/">CPM calculator</a>
+        <a href="../ad-budget-calculator/">Ad budget calculator</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="mailto:client.care@tutamail.com?subject=Ad%20ROI%20Calculator">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { mountCalculator, fmt } from '../assets/app.js';
+    mountCalculator(document.getElementById('roas'), {
+      fields: [
+        { key: 'ad_spend', label: 'Ad spend' },
+        { key: 'revenue', label: 'Revenue from ads' },
+        { key: 'roas', label: 'ROAS', hint: 'Revenue ÷ ad spend' },
+        { heading: 'Orders (optional)' },
+        { key: 'purchases', label: 'Orders' },
+        { key: 'aov', label: 'Average order value' },
+        { key: 'cpo', label: 'Cost per order', hint: 'Ad spend ÷ orders' },
+        { key: 'drr', label: 'ACOS', hint: 'Ad spend as a share of revenue' },
+        { heading: 'Is it profitable? (optional)' },
+        { key: 'gross_margin', label: 'Gross margin', hint: 'Share of revenue left after cost of goods' },
+        { key: 'break_even_roas', label: 'Break-even ROAS', hint: 'Below this ROAS, ads lose money' },
+        { key: 'net_profit', label: 'Profit after ads', hint: 'Gross profit − ad spend' }
+      ],
+      example: { ad_spend: 1000, revenue: 4000, purchases: 50, gross_margin: 0.4 },
+      summary: v => {
+        if (v.roas === undefined) return '';
+        let s = `ROAS <strong>${fmt(v.roas, 'float')}×</strong>: every 1 spent on ads brought back ${fmt(v.roas, 'float')} in revenue.`;
+        if (v.break_even_roas !== undefined && v.net_profit !== undefined) {
+          s += v.net_profit >= 0
+            ? ` That is above break-even (${fmt(v.break_even_roas, 'float')}×), with <strong>${fmt(v.net_profit, 'currency')}</strong> profit after ads.`
+            : ` That is below break-even (${fmt(v.break_even_roas, 'float')}×): the ads lose <strong>${fmt(-v.net_profit, 'currency')}</strong>.`;
+        }
+        return s;
+      }
+    });
+  </script>
+</body>
+</html>

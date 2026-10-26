@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ad Budget Calculator – How Much to Spend on Ads to Hit Your Goal</title>
+  <meta name="description" content="Free ad budget calculator: enter the number of sales, leads or customers you need, your CPC and conversion rate, and get the ad budget, clicks, CPL and CPA it takes.">
+  <link rel="canonical" href="https://vcoder-studio.github.io/ad-roi-calculator/ad-budget-calculator/">
+  <link rel="icon" href="../assets/favicon.png">
+  <link rel="stylesheet" href="../assets/style.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ad Budget Calculator – how much to spend on ads">
+  <meta property="og:description" content="From a sales or leads goal to the ad budget it takes. Free, in your browser.">
+  <meta property="og:url" content="https://vcoder-studio.github.io/ad-roi-calculator/ad-budget-calculator/">
+  <meta property="og:image" content="https://vcoder-studio.github.io/ad-roi-calculator/assets/icon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Ad Budget Calculator",
+    "url": "https://vcoder-studio.github.io/ad-roi-calculator/ad-budget-calculator/",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Any (web browser)",
+    "description": "Calculates the ad budget and clicks needed to reach a target number of sales, leads or customers, with cost per lead and cost per customer.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How much should I spend on ads?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Start from the result you need, not from a round number. Ad budget = target sales ÷ conversion rate × cost per click. For 200 sales at a 2.5% conversion rate and a 0.80 CPC: 200 ÷ 0.025 = 8,000 clicks, × 0.80 = 6,400." } },
+      { "@type": "Question", "name": "How do I calculate the budget for a leads or customers goal?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Go back through the funnel. Customers ÷ close rate = leads needed. Leads ÷ lead conversion rate = clicks needed. Clicks × CPC = budget. For 50 customers at a 20% close rate, 5% lead conversion and a 2.00 CPC: 250 leads, 5,000 clicks, a budget of 10,000." } },
+      { "@type": "Question", "name": "How much can I afford to pay per sale?",
+        "acceptedAnswer": { "@type": "Answer", "text": "On a single order, up to the gross profit that order brings: average order value × gross margin. With a 75 average order and a 40% margin, a cost per sale above 30 loses money unless customers buy again." } },
+      { "@type": "Question", "name": "Where do I get the CPC and conversion rate?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Best from your own history: CPC from your ad account, conversion rate from your analytics, close rate from your CRM. For a new campaign, Google Ads Keyword Planner shows bid ranges for keywords; treat any estimate as a starting point and update the plan after the first week of data." } }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-head">
+    <div class="wrap head-row">
+      <a class="brand" href="../"><img src="../assets/icon.png" alt="" width="30" height="30"> Ad ROI Calculator</a>
+      <nav class="site-nav" aria-label="Calculators">
+        <a href="../roas-calculator/">ROAS</a>
+        <a href="../break-even-roas-calculator/">Break-even ROAS</a>
+        <a href="../cpm-calculator/">CPM</a>
+        <a href="../ad-budget-calculator/" aria-current="page">Ad budget</a>
+        <a class="btn btn-primary btn-small" href="https://chromewebstore.google.com/detail/fnnnlndhfjnbdaienmlfkkcjajhhiaon?utm_source=site-budget">Add to Chrome</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <p class="eyebrow">Free calculator</p>
+      <h1>Ad Budget Calculator: how much to spend on ads</h1>
+      <p class="lead">Enter the number of sales or customers you need, your cost per click and your conversion rates. Get the budget, clicks and cost per sale it takes. You can also start from a budget and see what it buys.</p>
+    </section>
+
+    <div class="tool">
+      <div>
+        <h2 class="tool-title">Online sales</h2>
+        <div id="sales"></div>
+      </div>
+      <aside class="promo">
+        <img src="../assets/icon.png" alt="" width="44" height="44">
+        <h2>Build the media plan where you work</h2>
+        <p>Ad ROI Calculator for Chrome stays in the browser side panel while you check keyword prices, ad accounts and your CRM.</p>
+        <ul>
+          <li>Funnels for e-commerce, lead gen, SaaS and offline</li>
+          <li>Lock a target CPA and get the traffic you need</li>
+          <li>MQL, SQL, trials, calls, store visits</li>
+          <li>Works offline, no signup</li>
+        </ul>
+        <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/fnnnlndhfjnbdaienmlfkkcjajhhiaon?utm_source=site-budget">Add to Chrome — free</a>
+        <p class="fine">The free version sends no data anywhere.</p>
+      </aside>
+    </div>
+
+    <div class="tool">
+      <div>
+        <h2 class="tool-title">Leads and customers</h2>
+        <div id="leads"></div>
+      </div>
+      <aside class="promo promo-quiet">
+        <h2>Where to get the numbers</h2>
+        <ul>
+          <li><strong>CPC:</strong> your ad account history, or Keyword Planner bid ranges for a new campaign</li>
+          <li><strong>Conversion rates:</strong> your web analytics</li>
+          <li><strong>Close rate:</strong> your CRM or sales team</li>
+        </ul>
+        <p>Treat any estimate as a starting point. Update the plan after the first week of real data.</p>
+      </aside>
+    </div>
+
+    <article class="prose">
+      <h2>How to calculate an ad budget from a goal</h2>
+      <span class="formula">Ad budget = Target sales ÷ Conversion rate × CPC</span>
+      <p>For 200 sales, with 2.5% of clicks buying and a click costing 0.80: 200 ÷ 0.025 = 8,000 clicks. 8,000 × 0.80 = <strong>6,400</strong>. Each sale costs 6,400 ÷ 200 = 32 in ads.</p>
+
+      <h3>For leads and customers, go back through the funnel</h3>
+      <span class="formula">Leads = Customers ÷ Close rate · Clicks = Leads ÷ Lead CVR · Budget = Clicks × CPC</span>
+      <p>For 50 new customers, with 20% of leads becoming customers, 5% of clicks becoming leads and a 2.00 CPC: 50 ÷ 0.2 = 250 leads. 250 ÷ 0.05 = 5,000 clicks. 5,000 × 2.00 = <strong>10,000</strong>. That is a cost per lead of 40 and a cost per customer of 200.</p>
+
+      <h2>Check what you can afford</h2>
+      <p>A budget that reaches the goal can still lose money. On a single order, you can spend up to the gross profit that order brings:</p>
+      <span class="formula">Break-even cost per sale = Average order value × Gross margin</span>
+      <p>In the sales example the average order is 75. With a 40% margin, each order brings 30 in gross profit. The plan pays 32 per sale, so every sale loses 2 unless the customer buys again. To fix that, lower the CPC, raise the conversion rate or raise the order value. The <a href="../">profit goal planner</a> starts from the profit you want and gives the budget that delivers it.</p>
+
+      <h2>FAQ</h2>
+      <div class="faq">
+        <details open><summary>How much should I spend on ads?</summary>
+          <p>Start from the result you need, not from a round number. Ad budget = target sales ÷ conversion rate × cost per click. For 200 sales at a 2.5% conversion rate and a 0.80 CPC: 200 ÷ 0.025 = 8,000 clicks, × 0.80 = 6,400.</p></details>
+        <details><summary>How do I calculate the budget for a leads or customers goal?</summary>
+          <p>Go back through the funnel. Customers ÷ close rate = leads needed. Leads ÷ lead conversion rate = clicks needed. Clicks × CPC = budget. For 50 customers at a 20% close rate, 5% lead conversion and a 2.00 CPC: 250 leads, 5,000 clicks, a budget of 10,000.</p></details>
+        <details><summary>How much can I afford to pay per sale?</summary>
+          <p>On a single order, up to the gross profit that order brings: average order value × gross margin. With a 75 average order and a 40% margin, a cost per sale above 30 loses money unless customers buy again.</p></details>
+        <details><summary>Where do I get the CPC and conversion rate?</summary>
+          <p>Best from your own history: CPC from your ad account, conversion rate from your analytics, close rate from your CRM. For a new campaign, Google Ads Keyword Planner shows bid ranges for keywords; treat any estimate as a starting point and update the plan after the first week of data.</p></details>
+      </div>
+
+      <h2>More calculators</h2>
+      <div class="related">
+        <a href="../"><strong>Profit goal planner</strong><span>From target profit to ad budget</span></a>
+        <a href="../roas-calculator/"><strong>ROAS calculator</strong><span>Return on ad spend, ACOS and cost per order</span></a>
+        <a href="../break-even-roas-calculator/"><strong>Break-even ROAS</strong><span>The ROAS below which ads lose money</span></a>
+        <a href="../cpm-calculator/"><strong>CPM calculator</strong><span>CPM, impressions, budget, CTR and CPC</span></a>
+      </div>
+    </article>
+
+    <section class="cta-band">
+      <div>
+        <h2>Plan the budget for every client in one place</h2>
+        <p>Get the same calculator in your Chrome side panel, with every metric from CPM to LTV and ready funnels for your business.</p>
+      </div>
+      <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/fnnnlndhfjnbdaienmlfkkcjajhhiaon?utm_source=site-budget">Add to Chrome — free</a>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap foot-grid">
+      <span>© Vcoder Studio · Ad ROI Calculator</span>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="../">Profit goal planner</a>
+        <a href="../roas-calculator/">ROAS calculator</a>
+        <a href="../break-even-roas-calculator/">Break-even ROAS</a>
+        <a href="../cpm-calculator/">CPM calculator</a>
+        <a href="../privacy.html">Privacy</a>
+        <a href="mailto:client.care@tutamail.com?subject=Ad%20ROI%20Calculator">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { mountCalculator, fmt } from '../assets/app.js';
+    mountCalculator(document.getElementById('sales'), {
+      fields: [
+        { heading: 'Your goal' },
+        { key: 'purchases', label: 'Target sales', hint: 'Number of orders' },
+        { heading: 'What you know' },
+        { key: 'cpc', label: 'Cost per click (CPC)' },
+        { key: 'cvr', label: 'Conversion rate', hint: 'Share of clicks that buy' },
+        { key: 'aov', label: 'Average order value', hint: 'Optional, for revenue and ROAS' },
+        { heading: 'Your plan' },
+        { key: 'ad_spend', label: 'Ad budget' },
+        { key: 'clicks', label: 'Clicks' },
+        { key: 'cpo', label: 'Cost per sale (CPA)', hint: 'Ad spend ÷ sales' },
+        { key: 'revenue', label: 'Revenue' },
+        { key: 'roas', label: 'ROAS', hint: 'Revenue ÷ ad spend' }
+      ],
+      example: { purchases: 200, cpc: 0.8, cvr: 0.025, aov: 75 },
+      summary: v => v.ad_spend > 0 && v.purchases > 0 && v.clicks !== undefined
+        ? `For <strong>${fmt(Math.ceil(v.purchases))}</strong> sales you need about <strong>${fmt(v.ad_spend, 'currency')}</strong> in ad spend and <strong>${fmt(Math.ceil(v.clicks))}</strong> clicks.`
+        : ''
+    });
+    mountCalculator(document.getElementById('leads'), {
+      fields: [
+        { heading: 'Your goal' },
+        { key: 'purchases', label: 'Target customers', hint: 'New paying customers' },
+        { heading: 'What you know' },
+        { key: 'cpc', label: 'Cost per click (CPC)' },
+        { key: 'cvr_lead', label: 'Lead conversion rate', hint: 'Share of clicks that leave a request' },
+        { key: 'close_rate', label: 'Close rate', hint: 'Share of leads that become customers' },
+        { heading: 'Your plan' },
+        { key: 'ad_spend', label: 'Ad budget' },
+        { key: 'clicks', label: 'Clicks' },
+        { key: 'leads', label: 'Leads' },
+        { key: 'cpl', label: 'Cost per lead (CPL)', hint: 'Ad spend ÷ leads' },
+        { key: 'cpa', label: 'Cost per customer (CPA)', hint: 'Ad spend ÷ customers' }
+      ],
+      example: { purchases: 50, cpc: 2, cvr_lead: 0.05, close_rate: 0.2 },
+      summary: v => v.ad_spend > 0 && v.purchases > 0 && v.leads !== undefined && v.clicks !== undefined
+        ? `For <strong>${fmt(Math.ceil(v.purchases))}</strong> customers you need <strong>${fmt(Math.ceil(v.leads))}</strong> leads, <strong>${fmt(Math.ceil(v.clicks))}</strong> clicks and about <strong>${fmt(v.ad_spend, 'currency')}</strong> in ad spend.`
+        : ''
+    });
+  </script>
+</body>
+</html>

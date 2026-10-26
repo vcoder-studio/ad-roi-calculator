@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ad ROI Calculator – Work Backwards From the Profit You Want</title>
+  <meta name="description" content="Free ad ROI calculator that also runs backwards: enter the profit or sales you need and get the ad budget, clicks, ROAS and CPA it takes. No signup, nothing is uploaded.">
+  <link rel="canonical" href="https://vcoder-studio.github.io/ad-roi-calculator/">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="assets/style.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ad ROI Calculator – start from the profit you want">
+  <meta property="og:description" content="Type the profit you need, get the ad budget, clicks and ROAS it takes. Free, in your browser.">
+  <meta property="og:url" content="https://vcoder-studio.github.io/ad-roi-calculator/">
+  <meta property="og:image" content="https://vcoder-studio.github.io/ad-roi-calculator/assets/icon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Ad ROI Calculator",
+    "url": "https://vcoder-studio.github.io/ad-roi-calculator/",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Any (web browser)",
+    "description": "Ad ROI and media plan calculator that works in both directions: from budget to results, or from a profit or sales goal back to the budget, clicks and ROAS it takes.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How do I calculate the ad budget I need for a profit goal?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Work out the gross profit one sale brings (average order value × gross margin) and what one sale costs in ads (cost per click ÷ conversion rate). The difference is the profit per sale. Divide your profit goal by it to get the number of sales, then multiply the sales by the ad cost per sale to get the budget." } },
+      { "@type": "Question", "name": "What is the difference between ROAS and ROI?",
+        "acceptedAnswer": { "@type": "Answer", "text": "ROAS is revenue divided by ad spend. It ignores what the goods cost you. ROI (also called ROMI here) is net profit divided by ad spend: revenue × gross margin − ad spend, divided by ad spend. A campaign can have a ROAS above 1 and still lose money." } },
+      { "@type": "Question", "name": "Which currency does the calculator use?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Any. Enter all money values in the same currency and the results come out in that currency." } },
+      { "@type": "Question", "name": "Is the calculator free? Is my data uploaded?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, it is free and needs no signup. All calculations run in your browser. The numbers you type are not sent anywhere." } },
+      { "@type": "Question", "name": "What does the Chrome extension add?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The free Ad ROI Calculator extension opens in the browser side panel and stays open while you switch tabs, so your numbers are not lost. It covers many more metrics and has ready funnels for e-commerce, lead generation, SaaS and offline sales. You can lock any value and let it calculate the rest. PRO adds side-by-side scenario comparison, unlimited saved plans and copying a whole plan." } }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-head">
+    <div class="wrap head-row">
+      <a class="brand" href="./"><img src="assets/icon.png" alt="" width="30" height="30"> Ad ROI Calculator</a>
+      <nav class="site-nav" aria-label="Calculators">
+        <a href="roas-calculator/">ROAS</a>
+        <a href="break-even-roas-calculator/">Break-even ROAS</a>
+        <a href="cpm-calculator/">CPM</a>
+        <a href="ad-budget-calculator/">Ad budget</a>
+        <a class="btn btn-primary btn-small" href="https://chromewebstore.google.com/detail/fnnnlndhfjnbdaienmlfkkcjajhhiaon?utm_source=site-home">Add to Chrome</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <p class="eyebrow">Free ad ROI calculator</p>
+      <h1>Start from the profit you want. Get the ad budget it takes.</h1>
+      <p class="lead">Most calculators only go one way: budget in, results out. This one also runs backwards. Type the profit you need, and it works out the budget, clicks, sales and ROAS. Or start from the budget, as usual.</p>
+    </section>
+
+    <div class="tool">
+      <div id="plan"></div>
+      <aside class="promo">
+        <img src="assets/icon.png" alt="" width="44" height="44">
+        <h2>Keep it open while you work</h2>
+        <p>Ad ROI Calculator for Chrome sits in the browser side panel. Move between ad accounts, reports and spreadsheets. Your numbers stay put.</p>
+        <ul>
+          <li>Lock any number and calculate the rest</li>
+          <li>Funnels for e-commerce, lead gen, SaaS and offline</li>
+          <li>The formula behind every metric</li>
+          <li>Works offline, no signup</li>
+        </ul>
+        <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/fnnnlndhfjnbdaienmlfkkcjajhhiaon?utm_source=site-home">Add to Chrome — free</a>
+        <p class="fine">The free version sends no data anywhere.</p>
+      </aside>
+    </div>
+
+    <article class="prose">
+      <h2>How the reverse calculation works</h2>
+      <p>Say you need <strong>2,000</strong> in profit from ads next month. You know your average order is 120, your gross margin is 50%, a click costs 1.20 and 3% of clicks buy.</p>
+      <ol>
+        <li><strong>Profit from one sale before ads:</strong> 120 × 50% = 60.</li>
+        <li><strong>Ad cost of one sale:</strong> 1.20 ÷ 3% = 40.</li>
+        <li><strong>Profit per sale after ads:</strong> 60 − 40 = 20.</li>
+        <li><strong>Sales needed:</strong> 2,000 ÷ 20 = 100 sales.</li>
+        <li><strong>Clicks needed:</strong> 100 ÷ 3% ≈ 3,334 clicks.</li>
+        <li><strong>Ad budget:</strong> 100 × 40 = 4,000. That gives 12,000 in revenue and a ROAS of 3.</li>
+      </ol>
+      <p>The calculator above does all of this the moment you type. Change any number, including a result, and the rest updates.</p>
+
+      <h2>Why not just use a spreadsheet?</h2>
+      <p>A media plan template works in one direction. You enter a budget and a CTR and get clicks and leads. To answer “what budget do I need for 50 customers?” you have to rebuild the formulas by hand. Here every metric is linked both ways, so any field can be the starting point.</p>
+
+      <h2>Metrics and formulas</h2>
+      <table>
+        <thead><tr><th>Metric</th><th>Formula</th></tr></thead>
+        <tbody>
+          <tr><td>CPM (cost per 1,000 impressions)</td><td>Ad spend ÷ impressions × 1,000</td></tr>
+          <tr><td>CTR (click-through rate)</td><td>Clicks ÷ impressions</td></tr>
+          <tr><td>CPC (cost per click)</td><td>Ad spend ÷ clicks</td></tr>
+          <tr><td>CPL (cost per lead)</td><td>Ad spend ÷ leads</td></tr>
+          <tr><td>CPA (cost per customer)</td><td>Ad spend ÷ customers</td></tr>
+          <tr><td>ROAS (return on ad spend)</td><td>Revenue ÷ ad spend</td></tr>
+          <tr><td>Break-even ROAS</td><td>1 ÷ gross margin</td></tr>
+          <tr><td>POAS (profit on ad spend)</td><td>Gross profit ÷ ad spend</td></tr>
+          <tr><td>ROI / ROMI</td><td>(Gross profit − ad spend) ÷ ad spend</td></tr>
+        </tbody>
+      </table>
+
+      <h2>More calculators</h2>
+      <div class="related">
+        <a href="roas-calculator/"><strong>ROAS calculator</strong><span>Return on ad spend, ACOS and cost per order</span></a>
+        <a href="break-even-roas-calculator/"><strong>Break-even ROAS</strong><span>The ROAS below which ads lose money</span></a>
+        <a href="cpm-calculator/"><strong>CPM calculator</strong><span>CPM, impressions, budget, CTR and CPC</span></a>
+        <a href="ad-budget-calculator/"><strong>Ad budget calculator</strong><span>How much to spend for a sales or leads goal</span></a>
+      </div>
+
+      <h2>FAQ</h2>
+      <div class="faq">
+        <details open><summary>How do I calculate the ad budget I need for a profit goal?</summary>
+          <p>Work out the gross profit one sale brings (average order value × gross margin) and what one sale costs in ads (cost per click ÷ conversion rate). The difference is the profit per sale. Divide your profit goal by it to get the number of sales, then multiply the sales by the ad cost per sale to get the budget.</p></details>
+        <details><summary>What is the difference between ROAS and ROI?</summary>
+          <p>ROAS is revenue divided by ad spend. It ignores what the goods cost you. ROI (also called ROMI here) is net profit divided by ad spend: revenue × gross margin − ad spend, divided by ad spend. A campaign can have a ROAS above 1 and still lose money.</p></details>
+        <details><summary>Which currency does the calculator use?</summary>
+          <p>Any. Enter all money values in the same currency and the results come out in that currency.</p></details>
+        <details><summary>Is the calculator free? Is my data uploaded?</summary>
+          <p>Yes, it is free and needs no signup. All calculations run in your browser. The numbers you type are not sent anywhere.</p></details>
+        <details><summary>What does the Chrome extension add?</summary>
+          <p>The free Ad ROI Calculator extension opens in the browser side panel and stays open while you switch tabs, so your numbers are not lost. It covers many more metrics and has ready funnels for e-commerce, lead generation, SaaS and offline sales. You can lock any value and let it calculate the rest. PRO adds side-by-side scenario comparison, unlimited saved plans and copying a whole plan.</p></details>
+      </div>
+    </article>
+
+    <section class="cta-band">
+      <div>
+        <h2>Plan campaigns without losing your numbers</h2>
+        <p>Get the same calculator in your Chrome side panel, with every metric from CPM to LTV and ready funnels for your business.</p>
+      </div>
+      <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/fnnnlndhfjnbdaienmlfkkcjajhhiaon?utm_source=site-home">Add to Chrome — free</a>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap foot-grid">
+      <span>© Vcoder Studio · Ad ROI Calculator</span>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="roas-calculator/">ROAS calculator</a>
+        <a href="break-even-roas-calculator/">Break-even ROAS</a>
+        <a href="cpm-calculator/">CPM calculator</a>
+        <a href="ad-budget-calculator/">Ad budget calculator</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="mailto:client.care@tutamail.com?subject=Ad%20ROI%20Calculator">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { mountCalculator, fmt } from './assets/app.js';
+    mountCalculator(document.getElementById('plan'), {
+      fields: [
+        { heading: 'Your goal' },
+        { key: 'net_profit', label: 'Target profit', hint: 'What you want left after ad spend and cost of goods' },
+        { heading: 'What you know' },
+        { key: 'cpc', label: 'Cost per click (CPC)', hint: 'From your ad account' },
+        { key: 'cvr', label: 'Conversion rate', hint: 'Share of clicks that buy' },
+        { key: 'aov', label: 'Average order value', hint: 'Revenue ÷ number of orders' },
+        { key: 'gross_margin', label: 'Gross margin', hint: 'Share of revenue left after cost of goods' },
+        { heading: 'Your plan' },
+        { key: 'ad_spend', label: 'Ad budget' },
+        { key: 'clicks', label: 'Clicks' },
+        { key: 'purchases', label: 'Sales', hint: 'Number of orders' },
+        { key: 'revenue', label: 'Revenue' },
+        { key: 'roas', label: 'ROAS', hint: 'Revenue ÷ ad spend' },
+        { key: 'cpo', label: 'Cost per sale (CPA)', hint: 'Ad spend ÷ sales' },
+        { key: 'break_even_roas', label: 'Break-even ROAS', hint: 'Below this ROAS, ads lose money' },
+        { key: 'romi', label: 'ROI', hint: 'Profit ÷ ad spend' }
+      ],
+      example: { net_profit: 2000, cpc: 1.2, cvr: 0.03, aov: 120, gross_margin: 0.5 },
+      summary: v => v.ad_spend > 0 && v.clicks !== undefined && v.purchases !== undefined && v.net_profit > 0
+        ? `For a profit of <strong>${fmt(v.net_profit, 'currency')}</strong> you need about <strong>${fmt(v.ad_spend, 'currency')}</strong> in ad spend, <strong>${fmt(Math.ceil(v.clicks))}</strong> clicks and <strong>${fmt(Math.ceil(v.purchases))}</strong> sales.`
+        : v.roas !== undefined && v.break_even_roas !== undefined
+        ? `ROAS <strong>${fmt(v.roas, 'float')}×</strong> against a break-even ROAS of <strong>${fmt(v.break_even_roas, 'float')}×</strong>: ${v.roas >= v.break_even_roas ? 'the ads pay for themselves.' : 'the ads lose money.'}`
+        : ''
+    });
+  </script>
+</body>
+</html>
